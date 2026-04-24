@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Premium Portfolio Website
+
+A highly polished, modern, and premium personal portfolio website focused on perfect spacing, smooth motion, and clean visual hierarchy.
+
+## Tech Stack
+
+*   **Framework**: [Next.js (App Router)](https://nextjs.org/)
+*   **Library**: [React](https://reactjs.org/)
+*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+*   **Icons**: [Lucide React](https://lucide.dev/)
+
+## Design Philosophy
+
+*   **Minimal & Elegant**: Focus on spacing, alignment, and typography.
+*   **Intentionality**: Every element is purposeful, with no unnecessary clutter.
+*   **Color Palette**:
+    *   Primary: Deep Maroon (`#7E110F`)
+    *   Secondary: Gold (`#C9A24D`)
+    *   Accent: Teal (`#33B7BA`)
+    *   Base: Black and White
+*   **Typography**: Strong hierarchy with large bold headings and clean body text.
+
+## Features
+
+1.  **Hero Section**: Large bold heading with editorial styling and smooth fade-in animations.
+2.  **About Section**: Two-column layout with generous spacing and scroll-triggered transitions.
+3.  **Skills Section**: Minimal grid layout with interactive badges and subtle hover effects.
+4.  **Projects Section**: Clean card layout with large rounded images and clear visual hierarchy.
+5.  **Experience Section**: Vertical timeline with professional scroll animations.
+6.  **Contact Section**: Minimal form design with soft focus glows and premium input fields.
+7.  **Custom Cursor**: Interactive spring-based cursor for enhanced user engagement.
+8.  **Glassmorphism Navbar**: Sticky navbar that transitions from transparent to blurred on scroll.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Performance & Optimization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **Next.js Image Component**: Optimized image loading for better LCP.
+*   **Framer Motion**: Efficient animations with `easeInOut` transitions.
+*   **Responsive Design**: Fully optimized for all screen sizes.

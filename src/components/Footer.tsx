@@ -1,17 +1,19 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa6";
+import BackgroundSphere from "./BackgroundSphere";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="section-padding bg-black border-t border-white/5 relative overflow-hidden">
+    <footer className="section-padding bg-background border-t border-white/5 relative overflow-hidden">
+      <BackgroundSphere color="yellow" size={400} className="-left-20 -top-20 opacity-40" />
       <div className="container-custom relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
           <div>
-            <a href="#" className="text-3xl font-black tracking-tighter text-maroon mb-6 block">
-              AR<span className="text-gold">.</span>
+            <a href="#" className="text-3xl font-black tracking-tighter text-primary-pink mb-6 block">
+              AR<span className="text-primary-yellow">.</span>
             </a>
             <p className="text-foreground/40 max-w-sm text-sm leading-relaxed">
               Creating digital experiences that bridge the gap between design and technology. 
@@ -30,7 +32,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ y: -5, color: "#C9A24D" }}
+                whileHover={{ y: -5, color: "#FFD22B", borderColor: "rgba(255, 210, 43, 0.5)" }}
                 className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-foreground/60 transition-colors"
               >
                 {social.icon}
@@ -44,8 +46,8 @@ export default function Footer() {
             &copy; {currentYear} Abhinav Rana. All rights reserved.
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/30 hover:text-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/30 hover:text-gold transition-colors">Terms of Service</a>
+            <a href="#" className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/30 hover:text-primary-yellow transition-colors">Privacy Policy</a>
+            <a href="#" className="text-xs font-bold uppercase tracking-[0.2em] text-foreground/30 hover:text-primary-yellow transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

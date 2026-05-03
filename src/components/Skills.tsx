@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import BackgroundSphere from "./BackgroundSphere";
 
 const skillCategories = [
   {
@@ -19,6 +20,7 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="section-padding bg-background relative overflow-hidden">
+      <BackgroundSphere color="pink" size={600} className="-left-40 top-1/2 -translate-y-1/2 opacity-70" />
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,8 +29,8 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Expertise & <span className="text-teal">Tools.</span></h2>
-          <div className="w-20 h-1.5 bg-maroon mx-auto rounded-full" />
+          <h2 className="text-4xl md:text-5xl font-black mb-6">Expertise & <span className="text-primary-yellow">Tools.</span></h2>
+          <div className="w-20 h-1.5 bg-primary-pink mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -39,16 +41,16 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="glass p-10 rounded-3xl group hover:border-gold/30 transition-all duration-500"
+              className="glass-card p-10 rounded-3xl group transition-all duration-500"
             >
-              <h3 className="text-2xl font-black mb-8 text-maroon group-hover:text-gold transition-colors">
+              <h3 className="text-2xl font-black mb-8 text-primary-pink group-hover:text-primary-yellow transition-colors">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <motion.span
                     key={skill}
-                    whileHover={{ scale: 1.05, backgroundColor: "rgba(126, 17, 15, 0.2)" }}
+                    whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 128, 171, 0.1)", borderColor: "rgba(255, 128, 171, 0.3)" }}
                     className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-medium text-foreground/70 hover:text-white transition-all cursor-default"
                   >
                     {skill}

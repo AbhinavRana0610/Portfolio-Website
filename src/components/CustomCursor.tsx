@@ -40,7 +40,7 @@ export default function CustomCursor() {
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] hidden md:block">
       <motion.div
-        className="absolute w-4 h-4 bg-maroon rounded-full mix-blend-difference"
+        className="absolute w-4 h-4 bg-primary-pink rounded-full mix-blend-difference"
         style={{
           x: cursorX,
           y: cursorY,
@@ -53,7 +53,7 @@ export default function CustomCursor() {
         }}
       />
       <motion.div
-        className="absolute w-10 h-10 border border-gold/30 rounded-full"
+        className="absolute w-10 h-10 border border-primary-yellow/30 rounded-full"
         style={{
           x: cursorX,
           y: cursorY,
@@ -63,7 +63,7 @@ export default function CustomCursor() {
         animate={{
           scale: isHovering ? 1.5 : 1,
           opacity: isVisible ? 1 : 0,
-          borderColor: isHovering ? "rgba(126, 17, 15, 0.5)" : "rgba(201, 162, 77, 0.3)",
+          borderColor: isHovering ? "rgba(255, 128, 171, 0.5)" : "rgba(255, 210, 43, 0.3)",
         }}
         transition={{ type: "spring", stiffness: 250, damping: 25 }}
       />

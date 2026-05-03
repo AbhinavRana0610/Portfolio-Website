@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import BackgroundSphere from "./BackgroundSphere";
 
 const experiences = [
   {
@@ -24,8 +25,9 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-padding bg-background">
-      <div className="container-custom">
+    <section id="experience" className="section-padding bg-background relative overflow-hidden">
+      <BackgroundSphere color="mixed" size={700} className="-left-40 top-1/2 -translate-y-1/2 opacity-70" />
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +35,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-24 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-6">Professional <span className="text-teal">Journey.</span></h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-6">Professional <span className="text-primary-yellow">Journey.</span></h2>
           <p className="text-foreground/50 uppercase tracking-[0.4em] text-xs font-bold">A timeline of my career</p>
         </motion.div>
 
@@ -48,16 +50,16 @@ export default function Experience() {
               className="relative pl-12 pb-20 last:pb-0 border-l border-white/10"
             >
               {/* Timeline marker */}
-              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-maroon shadow-[0_0_20px_rgba(126,17,15,0.8)] z-10" />
+              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary-pink glow-pink z-10" />
               
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                 <h3 className="text-2xl font-black text-white">{exp.role}</h3>
-                <span className="text-xs font-bold uppercase tracking-widest text-gold px-3 py-1 bg-gold/5 border border-gold/20 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-widest text-primary-yellow px-3 py-1 bg-primary-yellow/5 border border-primary-yellow/20 rounded-full">
                   {exp.period}
                 </span>
               </div>
               
-              <h4 className="text-lg font-bold text-maroon mb-6">{exp.company}</h4>
+              <h4 className="text-lg font-bold text-primary-pink mb-6">{exp.company}</h4>
               
               <p className="text-foreground/60 text-lg leading-relaxed max-w-2xl whitespace-pre-line">
                 {exp.description}

@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
+  --background: #1E1E1E;
   --foreground: #FFFFFF;
-  --maroon: #7E110F;
-  --gold: #C9A24D;
-  --teal: #33B7BA;
-  --accent: #33B7BA;
-  --secondary: #C9A24D;
+  --primary-yellow: #FFD22B;
+  --primary-pink: #FF80AB;
+  --accent: #FF80AB;
+  --secondary: #FFD22B;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-maroon: var(--maroon);
-  --color-gold: var(--gold);
-  --color-teal: var(--teal);
+  --color-primary-yellow: var(--primary-yellow);
+  --color-primary-pink: var(--primary-pink);
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
   
@@ -50,17 +48,33 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    opacity: 0.03;
+    opacity: 0.05;
     pointer-events: none;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
   .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 hover:border-primary-pink/30 transition-all duration-300 shadow-2xl;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-maroon via-gold to-teal;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-pink to-primary-yellow;
+  }
+
+  .bg-gradient-pw {
+    @apply bg-gradient-to-r from-primary-pink to-primary-yellow;
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(255, 128, 171, 0.3);
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 20px rgba(255, 210, 43, 0.3);
   }
 
   .section-padding {
@@ -77,14 +91,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #333;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--maroon);
+  background: var(--primary-pink);
 }

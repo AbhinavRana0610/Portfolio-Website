@@ -1,13 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
+import BackgroundSphere from "./BackgroundSphere";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center noise-bg overflow-hidden pt-20">
       {/* Background elements */}
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-maroon/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-20 w-72 h-72 bg-teal/10 rounded-full blur-[100px] pointer-events-none" />
+      <BackgroundSphere color="pink" size={800} className="-top-40 -left-40 opacity-80" />
+      <BackgroundSphere color="yellow" size={600} className="-bottom-20 -right-20 opacity-70" delay={2} />
       
       <div className="container-custom px-6 relative z-10">
         <div className="max-w-4xl">
@@ -16,7 +17,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-[0.3em] bg-maroon/10 text-maroon rounded-full border border-maroon/20">
+            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-[0.3em] bg-primary-pink/10 text-primary-pink rounded-full border border-primary-pink/20">
               Frontend Architect
             </span>
           </motion.div>
@@ -28,8 +29,8 @@ export default function Hero() {
             className="text-6xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight"
           >
             Crafting digital <br />
-            <span className="text-maroon">experiences</span> that <br />
-            <span className="text-gold italic font-serif">matter.</span>
+            <span className="text-primary-pink">experiences</span> that <br />
+            <span className="text-primary-yellow italic font-serif">matter.</span>
           </motion.h1>
 
           <motion.p
@@ -50,18 +51,18 @@ export default function Hero() {
           >
             <motion.a
               href="#projects"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 128, 171, 0.4)" }}
               whileTap={{ scale: 0.95 }}
-              className="group px-8 py-4 bg-maroon text-white font-bold rounded-xl flex items-center gap-3 shadow-2xl shadow-maroon/30 transition-all"
+              className="group px-8 py-4 bg-gradient-pw text-white font-bold rounded-xl flex items-center gap-3 shadow-2xl transition-all"
             >
               View Projects
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
             <motion.a
               href="/resume.pdf"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, borderColor: "rgba(255, 210, 43, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-xl flex items-center gap-3 backdrop-blur-sm transition-all"
+              className="px-8 py-4 bg-background border border-primary-yellow/30 hover:bg-white/5 text-white font-bold rounded-xl flex items-center gap-3 backdrop-blur-sm transition-all"
             >
               Download CV
               <Download className="w-5 h-5" />
@@ -75,7 +76,7 @@ export default function Hero() {
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: "100px" }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-10 right-12 w-px bg-gradient-to-b from-transparent via-gold to-transparent hidden lg:block"
+        className="absolute bottom-10 right-12 w-px bg-gradient-to-b from-primary-pink via-primary-yellow to-transparent hidden lg:block"
       />
     </section>
   );

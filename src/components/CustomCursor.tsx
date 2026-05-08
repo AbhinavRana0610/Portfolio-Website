@@ -11,6 +11,7 @@ export default function CustomCursor() {
   const cursorY = useSpring(0, { stiffness: 500, damping: 30 });
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
 
     const moveCursor = (e: MouseEvent) => {

@@ -3,9 +3,9 @@ name: Verify Build
 # 1. When should this run?
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   validate:

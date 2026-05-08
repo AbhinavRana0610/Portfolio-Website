@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 const skillCategories = [
   {
@@ -14,13 +14,21 @@ const skillCategories = [
   {
     title: "Design",
     skills: ["Figma", "Canva", "Typography", "UI/UX Design"]
+  },
+  {
+    title: "Deployment",
+    skills: ["Vercel", "Netlify", "Github", "Render", "Google Cloud"]
+  },
+  {
+    title: "AI Tools & Agents",
+    skills: ["Chatgpt", "Gemini", "Deepseek", "Claude", "Antigravity", "Blackbox", "Cursor"]
   }
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="section-padding bg-background relative overflow-hidden">
-      <BackgroundSphere color="pink" size={600} className="-left-40 top-1/2 -translate-y-1/2 opacity-70" />
+
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,15 +41,15 @@ export default function Skills() {
           <div className="w-20 h-1.5 bg-primary-pink mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="flex flex-wrap justify-center gap-8">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="glass-card p-10 rounded-3xl group transition-all duration-500"
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="glass-card p-8 rounded-3xl group transition-all duration-500 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.5rem)] min-w-[300px]"
             >
               <h3 className="text-2xl font-black mb-8 text-primary-pink group-hover:text-primary-yellow transition-colors">
                 {category.title}

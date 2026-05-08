@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin } from "lucide-react";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 export default function Contact() {
   return (
     <section id="contact" className="section-padding noise-bg relative overflow-hidden">
-      <BackgroundSphere color="pink" size={800} className="-right-40 -bottom-40 opacity-80" />
+
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <motion.div

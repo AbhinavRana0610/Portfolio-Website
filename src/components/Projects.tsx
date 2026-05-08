@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 import Image from "next/image";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 const projects = [
   {
@@ -47,8 +47,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="section-padding noise-bg relative overflow-hidden">
-      <BackgroundSphere color="yellow" size={800} className="-right-60 top-1/4 opacity-70" />
-      <BackgroundSphere color="pink" size={600} className="-left-40 bottom-0 opacity-70" delay={3} />
+
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

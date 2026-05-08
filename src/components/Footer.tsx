@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa6";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="section-padding bg-background border-t border-white/5 relative overflow-hidden">
-      <BackgroundSphere color="yellow" size={400} className="-left-20 -top-20 opacity-40" />
+
       <div className="container-custom relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
           <div>

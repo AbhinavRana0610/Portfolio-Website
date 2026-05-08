@@ -1,13 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 const experiences = [
   {
     role: "Frontend Developer",
     company: "Promopact Marketing Pvt. Ltd., Delhi",
     period: "Nov 2025 – Present",
-    description: "Building and deploying production-ready web interfaces for real clients in a fast-paced startup environment.\n\n• Developed responsive UI/UX for multiple client websites\n• Collaborated with clients via calls and Google Meet to gather requirements and implement changes\n• Deployed websites on Vercel, Hostinger, and InfinityFree\n• Integrated SEO metadata and optimized performance\n• Designed banners and assets using Canva and AI tools\n• Debugged UI issues and improved user experience"
+    description: "Building and deploying production-ready web interfaces for real clients in a fast-paced startup environment.\n\n• Developed responsive UI/UX for multiple client websites\n• Deployed websites on Vercel, Hostinger, and InfinityFree\n• Integrated SEO metadata and optimized performance\n• Designed banners and assets using Canva and AI tools\n• Debugged UI issues and improved user experience"
   },
   {
     role: "Frontend Developer Intern",
@@ -26,7 +26,7 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="section-padding bg-background relative overflow-hidden">
-      <BackgroundSphere color="mixed" size={700} className="-left-40 top-1/2 -translate-y-1/2 opacity-70" />
+
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

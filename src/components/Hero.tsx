@@ -1,15 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center noise-bg overflow-hidden pt-20">
       {/* Background elements */}
-      <BackgroundSphere color="pink" size={800} className="-top-40 -left-40 opacity-80" />
-      <BackgroundSphere color="yellow" size={600} className="-bottom-20 -right-20 opacity-70" delay={2} />
-      
+      <div 
+        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
+        style={{
+          backgroundImage: "url('/img/pwBg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/20 via-black/40 to-black pointer-events-none" />
+
       <div className="container-custom px-6 relative z-10">
         <div className="max-w-4xl">
           <motion.div

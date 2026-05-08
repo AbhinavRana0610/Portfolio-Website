@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import BackgroundSphere from "./BackgroundSphere";
+
 
 export default function About() {
   return (
     <section id="about" className="section-padding noise-bg overflow-hidden relative">
-      <BackgroundSphere color="mixed" size={700} className="top-1/4 -right-40 opacity-70" />
+
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           <motion.div

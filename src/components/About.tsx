@@ -1,9 +1,12 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 
 export default function About() {
+  const [isColorful, setIsColorful] = useState(false);
+
   return (
     <section id="about" className="section-padding noise-bg overflow-hidden relative">
 
@@ -18,10 +21,10 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 border border-white/10">
               <motion.div
-                className="w-full h-full"
-                initial={{ filter: "grayscale(100%)" }}
+                className="w-full h-full cursor-pointer"
+                animate={{ filter: isColorful ? "grayscale(0%)" : "grayscale(100%)" }}
+                onTap={() => setIsColorful(!isColorful)}
                 whileHover={{ filter: "grayscale(0%)" }}
-                whileTap={{ filter: "grayscale(0%)" }}
                 transition={{ duration: 0.7 }}
               >
                 <Image 

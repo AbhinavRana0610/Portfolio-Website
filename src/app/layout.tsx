@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "Abhinav Rana | Editorial Portfolio",
   description: "An unconventional, asymmetrical editorial-style portfolio showcasing high-end frontend architecture and design systems.",
   keywords: ["frontend developer", "editorial design", "asymmetrical layout", "interaction design", "portfolio"],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

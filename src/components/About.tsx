@@ -17,12 +17,20 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 border border-white/10">
-              <Image 
-                src="/profile.png" 
-                alt="About me" 
-                fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              />
+              <motion.div
+                className="w-full h-full"
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ filter: "grayscale(0%)" }}
+                whileTap={{ filter: "grayscale(0%)" }}
+                transition={{ duration: 0.7 }}
+              >
+                <Image 
+                  src="/profile.png" 
+                  alt="About me" 
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
             </div>
             {/* Decorative background blocks */}
             <div className="absolute top-1/2 -translate-y-1/2 -left-4 w-2 h-32 bg-primary-yellow/50 rounded-full" />
